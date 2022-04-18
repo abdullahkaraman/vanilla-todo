@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Vanilla Todo</title>
+</head>
+<body>
+    <div class="app">
+        <h4 class="mb-3">TODO</h4>
+        <div id="addNew" data-toggle="modal" data-target="#form">
+            <span>Create New Task</span>
+            <i class="fas fa-plus"></i>
+        </div>
+        <h5 class="text-center my-3">Tasks</h5>
+
+  
+      <!-- Modal -->
+      <form class="modal fade" id="form" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Create New Task</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <p>Task Title</p>
+              <input class="form-control" type="text" id="textInput">
+              <div id="msg"></div>
+              <br>
+              <p>Due Date</p>
+              <input class="form-control" type="date" id="dateInput">
+              <br>
+              <p>Description</p>
+              <textarea class="form-control" name="" id="textarea" cols="30" rows="5"></textarea>
+              <br>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="submit" id="add" class="btn btn-primary">Create</button>
+            </div>
+          </div>
+        </div>
+      </form>
+
+        <div id="tasks">
+            <!-- <div class="item">
+                <span class="font-weight-bold">Task 1</span>
+                <span class="small text-secondary">18-04-2022</span>
+                <p>Pay the bills</p>
+                <span class="options">
+                    <i onClick="editTask(this)" data-toggle="modal" data-target="#form" class="fas fa-edit"></i>
+                    <i onClick="deleteTask(this)" class="fas fa-trash-alt"></i>
+                </span>
+            </div>
+            <div class="item">
+                <span class="font-weight-bold">Task 2</span>
+                <span class="small text-secondary">19-04-2022</span>
+                <p>Go to the market</p>
+                <span class="options">
+                    <i onClick="editTask(this)" data-toggle="modal" data-target="#form" class="fas fa-edit"></i>
+                    <i onClick="deleteTask(this)" class="fas fa-trash-alt"></i>
+                </span>
+            </div> -->
+        </div>
+    </div>
+</body>
+<script src="main.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+</html>
